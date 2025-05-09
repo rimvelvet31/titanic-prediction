@@ -34,7 +34,7 @@ There are two primary datasets:
 | Cabin       | String    | Cabin number (Example format: "C85"). Some passengers have multiple cabins listed in the same cell                |
 | Embarked    | String    | Port of embarkation ("C" = Cherbourg, "Q" = Queenstown, "S" = Southampton)                                        |
 
-## Data Exploration
+## Data Cleaning
 
 ### Duplicates
 
@@ -42,9 +42,15 @@ There are two primary datasets:
 
 ### Irrelevant Data
 
-- `PassengerId`, `Name`, and `Ticket` are not needed for prediction (_Note:_ Might create feature for ticket if useful patterns found)
+The following columns are not needed for prediction:
+
+- `PassengerId`
+- `Name`
+- `Ticket` (_Note:_ Might create feature for ticket if useful patterns found)
 
 ### Missing Values
+
+_Note: Make table with format: (Feature w/ missing data, Solution)_
 
 - `Age`: 177 missing
 - `Cabin`: 687 missing
@@ -65,4 +71,6 @@ There are two primary datasets:
 
 ### Outliers
 
-- Will check up on this later
+_Note: Make table with format: (Feature, Solution)_
+
+- Some passengers have multiple cabins
